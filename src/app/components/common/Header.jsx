@@ -42,7 +42,7 @@ function Header() {
                     </ul>
                 </div>
 
-                <div className="open-nav-logo" onClick={() => setOpenNav(!openNav)}>
+                <div className={`open-nav-logo ${openNav ? "fixed" : ""}`} onClick={() => setOpenNav(!openNav)}>
                     {/* <IoMdMenu /> */}
                     {openNav ? <RiMenu2Fill className='icon'/> : <RiMenu3Fill className='icon'/>}
                 </div>

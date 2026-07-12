@@ -69,9 +69,6 @@ nav{
     font-size: 37px;
     cursor: pointer;
     z-index: 2000;
-    position: fixed;
-    top: 20px;
-    right: 20px;
 }
 
 .open-nav-logo:hover{
@@ -114,6 +111,13 @@ nav{
 
     .open-nav-logo{
         display: block;
+        /* position: absolute; */
+        top: 20px;
+        right: 20px;
+    }
+
+    .fixed{
+        position: fixed;
     }
 
     .logo-title{
