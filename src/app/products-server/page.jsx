@@ -2,18 +2,16 @@ import React from 'react'
 import { getProducts } from "../../api-services/servicesApi";
 import "../components/home-components/serviceSection.css"
 import Link from 'next/link';
+import Image from "next/image";
 
 export const metadata = {
-  
+  title: "Products Server Page",
+  description: "Products Server Description",
 };
 
 async function ServicesServer() {
   let data = await getProducts()
   console.log(data);
-
-  metadata.title = "Products Server page"
-  metadata.description = "Products Server Description"
-
   
   return (
       <section className="product-section">
@@ -24,7 +22,12 @@ async function ServicesServer() {
           {data.map((item) => (
           <div className="product-card" key={item.id}>
 
-            <img src={item.images[0]} alt={item.name} />
+            <image 
+              src={item.images[0]} 
+              alt={item.name} 
+              width={300}
+              height={300}
+            />
 
             <h3>{item.title}</h3>
 

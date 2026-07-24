@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react'
 
 import serviceData from "../../api/service.json"
+import Image from "next/image";
 
 function Services() {
   return (
@@ -9,7 +10,12 @@ function Services() {
         {serviceData.map((item) => (
           <div className="product-card" key={item.id}>
 
-            <img src={item.image} alt={item.name} />
+            <Image 
+              src={item.image} 
+              alt={item.name} 
+              width={900}
+              height={900}
+            />
 
             <h3>{item.name}</h3>
 
