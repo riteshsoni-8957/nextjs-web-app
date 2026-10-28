@@ -36,8 +36,8 @@ function Header() {
                             <li>Services</li>
                         </Link>
                         
-                        <Link href="/products-server" onClick={() => setOpenNav(false)}>
-                            <li>Products Server</li>
+                        <Link href="/products" onClick={() => setOpenNav(false)}>
+                            <li>Products</li>
                         </Link>
                     </ul>
                 </div>
